@@ -250,11 +250,14 @@ em.arrow{
 .imgthum{
 	position:absolute;
 	width:120px;
-	right:0;
+	right:5px;
 	top:0;
 	font-size:0;
 	letter-spacing:-3px;
 	overflow:hidden;
+	border-style:none solid;
+	border-width:2px;
+	border-color:#f0f0f0;
 }
 .imgthum img{
 	vertical-align:bottom;
