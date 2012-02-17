@@ -200,21 +200,38 @@ em.arrow{
 	background-image:url(../img/slbtn.png);
 	background-repeat:no-repeat;
 	position:absolute;
-	top:160px;
 }
 .prev{
 	left:-20px;
+	top:160px;
 	background-position:center 0;
 }
 .prev:hover{
-	background-position:center -45px;
+	background-position:center -44px;
 }
 .next{
 	right:-24px;
+	top:160px;
 	background-position:center -90px;
 }
 .next:hover{
-	background-position:center -135px;
+	background-position:center -134px;
+}
+.up{
+	right:30px;
+	top:0;
+	background-position:center -180px;
+}
+.down{
+	right:30px;
+	bottom:-6px;
+	background-position:center -270px;
+}
+.up:hover{
+	background-position:center -226px;
+}
+.down:hover{
+	background-position:center -314px;
 }
 .toggle{
 	position:absolute;
