@@ -88,8 +88,10 @@ em.arrow{
 #logo{
 	position:absolute;
 	top:7px;
-	left:120px;
 	z-index:9;
+	padding-left:120px;
+	width:100%;
+	border-bottom:2px solid #fff;
 }
 #logo a{
 	display:block;
@@ -219,7 +221,7 @@ em.arrow{
 }
 .up{
 	right:30px;
-	top:0;
+	top:2px;
 	background-position:center -180px;
 }
 .down{
