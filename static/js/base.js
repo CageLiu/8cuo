@@ -1,0 +1,24 @@
+$(document).ready(function(){
+	if($.browser.msie){
+		if($.browser.version == "7.0"){
+			var oArea = $(".area");
+			oArea.css("height",$("#wrap").height() + "px");
+			$(window).resize(function(){
+				oArea.css("height",$("#wrap").height() + "px");
+			})
+		}
+	}
+
+	var oNav = $("#nav li");
+	var oIndex = $("#index");
+	var oNavSlider = $("#nav_slider");
+	var navLeft = $("#nav").offset().left;
+	oNav.click(function(){
+		oNav.removeClass();
+		$(this).addClass("current");
+		oNavSlider.stop().animate({"left":$(this).offset().left - navLeft + "px"},700,"easeInOutElastic");
+		var index = $(this).index();
+		var dh = $("#wrap").innerHeight();
+		oIndex.stop().animate({"marginTop":-(index * dh) + "px"},600,"easeInOutElastic");
+	});
+});

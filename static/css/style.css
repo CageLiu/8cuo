@@ -1,0 +1,275 @@
+html{
+	overflow:hidden;
+	height:100%;
+	_padding-top:76px;
+	_padding-bottom:30px;
+}
+body,ul,ol,p,dl,dd,form,textarea,h1,h2,h3,h4,fieldset,input{
+    margin:0;
+}
+
+ul,ol,input,button,td,th,fieldset{
+    padding:0;
+}
+ul,ol{
+    list-style-type:none;
+    list-style-position:outside;
+}
+a{
+    text-decoration:none;
+    color:#3b5998;
+}
+a img,fieldset{
+    border:none;
+}
+fieldset legend{
+	display:none
+}
+a,input,button,textarea{
+	outline:none;
+}
+textarea{
+	resize:none
+}
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+    table-layout:fixed;
+}
+em{
+    font-style:normal
+}
+.clear{
+    clear:both;
+}
+.clearfix:after{
+    content:'';
+    display:block;
+    clear:both;
+    height:0;
+    font-size:0;
+    line-height:0;
+    overflow:hidden;
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.alignleft{
+	text-align:left;
+}
+.aligncenter{
+	text-align:center;
+}
+.alignright{
+	text-align:right;
+}
+body{
+    font:12px/1.5 Tahoma,simsun,'宋体',Helvetica,simsun,sans-serif;
+    color:#333;
+	height:100%;
+	overflow:hidden;
+	width:100%;
+	color:#fff;
+	background:#202020;
+}
+em.arrow{
+	display:inline-block;
+	width:0;
+	height:0;
+	font-size:0;
+	overflow:hidden;
+	text-indent:-999em;
+	cursor:pointer;
+	border-style:solid;
+}
+#logo{
+	position:absolute;
+	top:7px;
+	left:120px;
+	z-index:9;
+}
+#logo a{
+	display:block;
+	width:98px;
+	height:69px;
+	text-indent:-999em;
+	background:url(../img/logo.jpg) no-repeat center center;
+}
+.nav{
+	position:absolute;
+	right:12px;
+	top:15px;
+	z-index:99;
+}
+.nav li{
+	float:left;
+	height:40px;
+	width:96px;
+	height:40px;
+	text-align:center;
+	line-height:40px;
+	position:relative;
+	z-index:89;
+}
+.nav a{
+	color:#fff;
+	font-size:14px;
+	display:block;
+	height:100%;
+}
+.nav a:hover,
+.nav .current a:hover{
+	color:#e63009;
+}
+.nav .current a{
+	color:#202020;
+}
+.wrap{
+	position:absolute;
+	right:0;
+	bottom:30px;
+	left:0;
+	top:76px;
+	overflow:hidden;
+	z-index:8;
+	border-bottom:2px solid #777;
+	_width:100%;
+	_height:100%;
+}
+.area{
+	height:100%;
+	overflow:hidden;
+	position:relative;
+}
+.ft{
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	height:30px;
+	background:#111;
+	text-align:center;
+	line-height:30px;
+}
+#nav_slider{
+	width:96px;
+	height:40px;
+	display:block;
+	text-indent:-999em;
+	background:url(../img/current_nav.png) no-repeat center center;
+	position:absolute;
+	left:0;
+	top:2px;
+	z-index:88;
+}
+.amiddle{
+	position:absolute;
+	top:50%;
+	left:50%;
+	height:426px;
+}
+.slider{
+	position:relative;
+	height:426px;
+	top:-50%;
+	left:-50%;
+	background:url(../img/sliderbg.png) no-repeat 0 top;
+	padding-top:20px;
+	padding-left:21px;
+	padding-right:21px;
+}
+.slider .inner{
+	width:900px;
+	height:360px;
+	overflow:hidden;
+}
+.slider li{
+	float:left;
+}
+.slider img{
+	vertical-align:bottom;
+}
+.sliderbtn{
+	width:65px;
+	height:45px;
+	display:block;
+	text-indent:-999em;
+	background-image:url(../img/slbtn.png);
+	background-repeat:no-repeat;
+	position:absolute;
+	top:160px;
+}
+.prev{
+	left:-20px;
+	background-position:center 0;
+}
+.prev:hover{
+	background-position:center -45px;
+}
+.next{
+	right:-24px;
+	background-position:center -90px;
+}
+.next:hover{
+	background-position:center -135px;
+}
+.toggle{
+	position:absolute;
+	right:21px;
+	bottom:41px;
+	font-size:0;
+	*letter-spacing:-1px;
+}
+.toggle span{
+	display:inline-block;
+	width:0;
+	height:0;
+	padding-left:20px;
+	padding-top:20px;
+	overflow:hidden;
+	line-height:23px;
+	background-image:url(../img/sliderbtn.png);
+	background-position:0 0;
+	background-repeat:no-repeat;
+	cursor:pointer;
+}
+.toggle .current{
+	background-position:0 -20px;
+}
+.slidertit a{
+	color:#202020;
+	font-size:14px;
+	line-height:29px;
+}
+.slider a:hover{
+	color:#e63009;
+}
+.imgthum{
+	position:absolute;
+	width:120px;
+	right:0;
+	top:0;
+	font-size:0;
+	letter-spacing:-3px;
+	overflow:hidden;
+}
+.imgthum img{
+	vertical-align:bottom;
+	cursor:pointer;
+}
+.imgview{
+	margin-left:130px;
+	height:100%;
+	margin-right:130px;
+}
+.imgview img{
+	vertical-align:bottom;
+}
+.imgview table,.imgview td{
+	height:100%;
+	width:100%;
+	text-align:center;
+}
