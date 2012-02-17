@@ -91,7 +91,7 @@ em.arrow{
 	z-index:9;
 	padding-left:120px;
 	width:100%;
-	border-bottom:2px solid #fff;
+	border-bottom:2px solid #eae8e8;
 }
 #logo a{
 	display:block;
@@ -286,6 +286,7 @@ em.arrow{
 	margin-left:130px;
 	height:100%;
 	margin-right:130px;
+	position:relative;
 }
 .imgview img{
 	vertical-align:middle;
@@ -303,4 +304,12 @@ em.arrow{
 .imgview td{
 	height:100%;
 	text-align:center;
+}
+#casetxt{
+	position:absolute;
+	bottom:0;
+	text-align:center;
+	font-size:14px;
+	width:100%;
+	background:#f30;
 }
