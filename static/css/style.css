@@ -268,6 +268,10 @@ em.arrow{
 .imgview img{
 	vertical-align:middle;
 }
+.imgview .lcur{
+	/*cursor:url("../img/left.cur"), pointer;*/
+	cursor:url("http://184.164.137.138/static/img/right.cur"), pointer;
+}
 .imgview table{
 	height:100%;
 	width:100%;
