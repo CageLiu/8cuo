@@ -2,7 +2,9 @@ $(document).ready(function(){
 	if($.browser.msie){
 		if($.browser.version == "7.0"){
 			var oArea = $(".area");
+			var oView = $("#view");
 			oArea.css("height",$("#wrap").height() + "px");
+			oView.css("height",$("#wrap").height() - 1 + "px").css("height",$("#wrap").height() + 1 + "px");
 			$(window).resize(function(){
 				oArea.css("height",$("#wrap").height() + "px");
 			})

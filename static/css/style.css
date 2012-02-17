@@ -266,10 +266,13 @@ em.arrow{
 	margin-right:130px;
 }
 .imgview img{
-	vertical-align:bottom;
+	vertical-align:middle;
 }
-.imgview table,.imgview td{
+.imgview table{
 	height:100%;
 	width:100%;
+}
+.imgview td{
+	height:100%;
 	text-align:center;
 }
