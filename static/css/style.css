@@ -368,3 +368,19 @@ em.arrow{
 #server .bc{
 	padding:0 10px;
 }
+
+
+
+
+
+
+#contact{
+	font-size:14px;
+}
+#contact div{
+	width:600px;
+	margin:50px auto 0;
+}
+#contact strong{
+	color:#e63009;
+}
