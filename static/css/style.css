@@ -395,8 +395,11 @@ em.arrow{
 #contact strong{
 	color:#e63009;
 }
-
-.inner_page{
-	/*background:url(../img/loading.gif) no-repeat center center #202020;*/
-	background:none;
+.index{
+	background-image:url(../img/loading.gif);
+	background-repeat:no-repeat;
+	background-position:-9999px -9999px;
+}
+.inner_page,.inner_page body{
+	background:url(../img/loading.gif) no-repeat center center #202020;
 }
