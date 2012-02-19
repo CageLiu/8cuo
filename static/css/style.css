@@ -396,5 +396,6 @@ em.arrow{
 }
 
 .inner_page{
-	background:url(../img/loading.gif) no-repeat center center #202020;
+	/*background:url(../img/loading.gif) no-repeat center center #202020;*/
+	background:none;
 }
