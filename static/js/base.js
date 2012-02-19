@@ -15,6 +15,7 @@ $(document).ready(function(){
 	var oIndex = $("#index");
 	var oNavSlider = $("#nav_slider");
 	var navLeft = $("#nav").offset().left;
+	var oArea = $(".area");
 	var index = 0;
 	oNav.click(function(){
 		oNav.removeClass();
@@ -23,6 +24,11 @@ $(document).ready(function(){
 		index = $(this).index();
 		var dh = $("#wrap").innerHeight();
 		oIndex.stop().animate({"marginTop":-(index * dh) + "px"},600,"easeInOutElastic");
+		var oFrame = oArea.eq(index).children("iframe");
+		//oFrame.attr("src",oArea.eq(index).attr("id") + ".html");
+		if(!oFrame.attr("src")){
+			oFrame.attr("src",oArea.eq(index).attr("id") + ".html");
+		}
 	});
 
 	$(window).resize(function(){

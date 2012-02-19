@@ -146,6 +146,16 @@ em.arrow{
 	overflow:hidden;
 	position:relative;
 }
+.inner_page .area{
+	display:none;
+	background:#202020;
+}
+.area iframe{
+	border:none;
+	overflow:hidden;
+	width:100%;
+	height:100%;
+}
 .ft{
 	position:absolute;
 	bottom:0;
@@ -383,4 +393,8 @@ em.arrow{
 }
 #contact strong{
 	color:#e63009;
+}
+
+.inner_page{
+	background:url(../img/loading.gif) no-repeat center center #202020;
 }
