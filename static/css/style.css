@@ -331,3 +331,40 @@ em.arrow{
 #casetxt a:hover{
 	color:#e63009;
 }
+#server{
+	font-size:0;
+	letter-spacing:-10px;
+}
+#server .box{
+	display:inline-block;
+	width:25%;
+	margin-top:12px;
+	*display:inline;
+	zoom:1;
+	_margin-left:-1px;
+	font-size:12px;
+	letter-spacing:normal;
+	vertical-align:top;
+}
+#server .bt{
+	height:37px;
+	overflow:hidden;
+	text-indent:-999em;
+	background-image:url(../img/tit.png);
+	background-repeat:no-repeat;
+}
+.qdkf{
+	background-position:center 0;
+}
+.wysj{
+	background-position:center -37px;
+}
+.wzjs{
+	background-position:center -74px;
+}
+.wztg{
+	background-position:center -111px;
+}
+#server .bc{
+	padding:0 10px;
+}
