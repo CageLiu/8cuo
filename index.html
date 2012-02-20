@@ -34,9 +34,9 @@
 					<div class="slider">
 						<div class="inner" id="slider_box">
 							<ul id="imglist">
-								<li><a href="#"><img src="static/img/slider1.jpg" alt="" title="" /></a></li>
-								<li><a href="#"><img src="static/img/slider2.jpg" alt="" title="" /></a></li>
-								<li><a href="#"><img src="static/img/slider3.jpg" alt="" title="" /></a></li>
+								<li><a href="#"><img src="static/img/slider1.jpg" alt="" title="第一张图片" /></a></li>
+								<li><a href="#"><img src="static/img/slider2.jpg" alt="" title="第二张图片" /></a></li>
+								<li><a href="#"><img src="static/img/slider3.jpg" alt="" title="第三张图片" /></a></li>
 							</ul>
 						</div>
 						<a href="#" class="sliderbtn prev" hidefocus="true">prev</a>
@@ -47,7 +47,7 @@
 							<span>3</span>
 						</div>
 						<div class="slidertit">
-							<a href="#" hidefocus="true" id="tit">这里是图片的标题，带链接…</a>
+							<a href="#" hidefocus="true" id="tit"></a>
 						</div>
 					</div>
 					<script type="text/javascript">
@@ -57,16 +57,42 @@
 						slider.box = $("#slider_box");
 						slider.toggle = $("#toggle span");
 						slider.btn = $(".sliderbtn");
+						slider.tit = $("#tit");
+						slider.tit.text($("#imglist img").eq(0).attr("title"));
 						slider.W = slider.box.width();
 						slider.index = 0;
 						slider.list.css("width",slider.W * slider.item.length + "px");
-						S = function(){
+						slider.S = function(){
 							slider.index < slider.item.length -1 ? ++slider.index : slider.index = 0;
+							S();
+						}
+						slider.timer = setInterval(slider.S,4000);
+						$("#toggle span,.sliderbtn").hover(
+							function(){
+								clearInterval(slider.timer);			
+							},
+							function(){
+								slider.timer = setInterval(slider.S,4000);
+							}
+						);
+						slider.btn.click(function(){
+							if($(this).hasClass("prev")){
+								slider.index > 0 ? slider.index-- : slider.index = slider.item.length - 1;
+							}else{
+								slider.index < slider.item.length -1 ? slider.index++ : slider.index = 0;
+							}
+							S();
+						});
+						slider.toggle.click(function(){
+							slider.index = $(this).index();
+							S();
+						});
+						function S(){
 							slider.list.stop().animate({"marginLeft":-slider.index * slider.W},1400,"easeInOutElastic");
 							slider.toggle.removeClass("current");
 							slider.toggle.eq(slider.index).addClass("current");
+							slider.tit.text(slider.item.eq(slider.index).find("img").attr("title"));
 						}
-						slider.timer = setInterval(S,3000);
 					</script>
 				</div>
 			</div>
