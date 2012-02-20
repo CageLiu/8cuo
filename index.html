@@ -32,8 +32,8 @@
 			<div class="area" id="index">
 				<div class="amiddle">
 					<div class="slider">
-						<div class="inner">
-							<ul style="width:2700px">
+						<div class="inner" id="slider_box">
+							<ul id="imglist">
 								<li><a href="#"><img src="static/img/slider1.jpg" alt="" title="" /></a></li>
 								<li><a href="#"><img src="static/img/slider2.jpg" alt="" title="" /></a></li>
 								<li><a href="#"><img src="static/img/slider3.jpg" alt="" title="" /></a></li>
@@ -41,7 +41,7 @@
 						</div>
 						<a href="#" class="sliderbtn prev" hidefocus="true">prev</a>
 						<a href="#" class="sliderbtn next" hidefocus="true">next</a>
-						<div class="toggle">
+						<div class="toggle" id="toggle">
 							<span class="current">1</span>
 							<span>2</span>
 							<span>3</span>
@@ -50,6 +50,24 @@
 							<a href="#" hidefocus="true" id="tit">这里是图片的标题，带链接…</a>
 						</div>
 					</div>
+					<script type="text/javascript">
+						var slider = {};
+						slider.list = $("#imglist");
+						slider.item = $("#imglist li");
+						slider.box = $("#slider_box");
+						slider.toggle = $("#toggle span");
+						slider.btn = $(".sliderbtn");
+						slider.W = slider.box.width();
+						slider.index = 0;
+						slider.list.css("width",slider.W * slider.item.length + "px");
+						S = function(){
+							slider.index < slider.item.length -1 ? ++slider.index : slider.index = 0;
+							slider.list.stop().animate({"marginLeft":-slider.index * slider.W},1400,"easeInOutElastic");
+							slider.toggle.removeClass("current");
+							slider.toggle.eq(slider.index).addClass("current");
+						}
+						slider.timer = setInterval(S,2000);
+					</script>
 				</div>
 			</div>
 			<div class="area" id="case">
