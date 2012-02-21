@@ -233,7 +233,7 @@ em.arrow{
 }
 .up{
 	right:30px;
-	top:2px;
+	top:0;
 	background-position:center -180px;
 }
 .down{
