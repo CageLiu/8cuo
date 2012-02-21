@@ -4,6 +4,7 @@
 		<meta charset="utf-8" />
 		<title>臭皮匠建站--案例欣赏</title>
 		<link type="text/css" rel="stylesheet" href="static/css/style.css?v=1"/>
+		<script type="text/javascript" src="static/js/jquery.js"></script>
 
 		<!--[if IE 6]>
 			<script type="text/javascript" src="static/js/DD_belatedPNG.js"></script>
@@ -28,40 +29,50 @@
 	<body onload="display()">
 		<div class="area" id="case">
 			<ul class="imgthum" id="thum">
-				<li><img src="static/img/thum1.png" alt="" /></li>
-				<li><img src="static/img/thum2.png" alt="" /></li>
-				<li><img src="static/img/thum3.png" alt="" /></li>
-				<li><img src="static/img/thum4.png" alt="" /></li>
-				<li><img src="static/img/thum5.png" alt="" /></li>
-				<li><img src="static/img/thum1.png" alt="" /></li>
-				<li><img src="static/img/thum2.png" alt="" /></li>
-				<li><img src="static/img/thum3.png" alt="" /></li>
-				<li><img src="static/img/thum4.png" alt="" /></li>
-				<li><img src="static/img/thum5.png" alt="" /></li>
-				<li><img src="static/img/thum1.png" alt="" /></li>
-				<li><img src="static/img/thum2.png" alt="" /></li>
-				<li><img src="static/img/thum3.png" alt="" /></li>
-				<li><img src="static/img/thum4.png" alt="" /></li>
-				<li><img src="static/img/thum5.png" alt="" /></li>
+				<li><img src="static/img/thum1.png" rel="static/img/slider1.jpg" alt="案例1" title="案例1" /></li>
+				<li><img src="static/img/thum2.png" rel="static/img/slider2.jpg" alt="案例2" title="案例2" /></li>
+				<li><img src="static/img/thum3.png" rel="static/img/slider3.jpg" alt="案例3" title="案例3" /></li>
+				<li><img src="static/img/thum4.png" rel="static/img/slider1.jpg" alt="案例4" title="案例4" /></li>
+				<li><img src="static/img/thum5.png" rel="static/img/slider2.jpg" alt="案例5" title="案例5" /></li>
+				<li><img src="static/img/thum1.png" rel="static/img/slider3.jpg" alt="案例6" title="案例6" /></li>
+				<li><img src="static/img/thum2.png" rel="static/img/slider1.jpg" alt="案例7" title="案例7" /></li>
+				<li><img src="static/img/thum3.png" rel="static/img/slider2.jpg" alt="案例8" title="案例8" /></li>
+				<li><img src="static/img/thum4.png" rel="static/img/slider3.jpg" alt="案例9" title="案例9" /></li>
+				<li><img src="static/img/thum5.png" rel="static/img/slider1.jpg" alt="案例10" title="案例10" /></li>
+				<li><img src="static/img/thum1.png" rel="static/img/slider2.jpg" alt="案例11" title="案例11" /></li>
+				<li><img src="static/img/thum2.png" rel="static/img/slider3.jpg" alt="案例12" title="案例12" /></li>
+				<li><img src="static/img/thum3.png" rel="static/img/slider1.jpg" alt="案例13" title="案例13" /></li>
+				<li><img src="static/img/thum4.png" rel="static/img/slider2.jpg" alt="案例14" title="案例14" /></li>
+				<li><img src="static/img/thum5.png" rel="static/img/slider3.jpg" alt="案例15" title="案例15" /></li>
 			</ul>
 			<div class="imgview" id="view">
 				<table>
 					<tr>
 						<td>
-							<a href="javascript:;"><img src="static/img/slider2.jpg" alt="" /></a>
+							<a href="javascript:;"><img src="static/img/slider2.jpg" alt="" id="bigimg" /></a>
 						</td>
 					</tr>
 				</table>
 				<div class="casetxt">
 					<div id="casetxt">
-						<p>案例名称</p>
-						<p>网址：<a href="http://www.baidu.com">http://www.baidu.com</a></p>
+						<p>案例名称 <br/>
+						网址：<a href="http://www.baidu.com">http://www.baidu.com</a>
+						</p>
 					</div>
 				</div>
 			</div>
 			<a href="#" class="sliderbtn up" hidefocus="true">prev</a>
 			<a href="#" class="sliderbtn down" hidefocus="true">next</a>
+			<i id="arrow">arrow</i>
 		</div>
+		<script type="text/javascript">
+			var V = {
+				big : $("#bigimg"),
+				thum : $("#thum"),
+				item : $("#thum img"),
+				btn : $(".sliderbtn")
+			};
+		</script>
 	
 	</body>
 </html>
