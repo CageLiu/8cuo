@@ -213,6 +213,7 @@ em.arrow{
 	background-image:url(../img/slbtn.png);
 	background-repeat:no-repeat;
 	position:absolute;
+	z-index:99;
 }
 .prev{
 	left:-20px;
