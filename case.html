@@ -67,7 +67,7 @@
 			   -<a href="javascript:;" class="sliderbtn down" hidefocus="true">next</a>
 			   -->
 			<i id="arrow">arrow</i>
-			<div class="cbox">cbox</div>
+			<div id="cbox">cbox</div>
 		</div>
 		<script type="text/javascript">
 			var V = {
@@ -79,6 +79,7 @@
 				txt : $("#casetxt"),
 				index : null
 			};
+			V.thum.css("marginTop",V.box.height() / 2 - 45 + "px");
 			V.item.click(function(){
 				var _this = $(this);
 				var iH = $(this).height();
