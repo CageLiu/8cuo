@@ -290,6 +290,8 @@ em.arrow{
 	border-width:2px;
 	border-color:#f0f0f0;
 	z-index:19;
+	height:100%;
+	overflow:hidden;
 }
 .imgthum img{
 	vertical-align:bottom;
@@ -336,6 +338,21 @@ em.arrow{
 .imgview td{
 	height:100%;
 	text-align:center;
+}
+.cbox{
+	width:122px;
+	height:88px;
+	position:absolute;
+	right:5px;
+	top:50%;
+	margin-top:-45px;
+	z-index:99;
+	border-style:solid none;
+	border-width:2px;
+	border-color:#f0f0f0;
+	text-indent:-999em;
+	background:rgba(240,240,240,0.4);
+    filter:progid:DXImageTransform.Microsoft.gradient(enabled='true',startColorstr='#66F0F0F0', endColorstr='#66F0F0F0');
 }
 .casetxt{
 	position:absolute;

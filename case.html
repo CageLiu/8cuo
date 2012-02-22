@@ -28,51 +28,68 @@
 
 	<body onload="display()">
 		<div class="area" id="case">
-			<ul class="imgthum" id="thum">
-				<li><img src="static/img/thum1.png" rel="static/img/slider1.jpg" alt="案例1" title="案例1" /></li>
-				<li><img src="static/img/thum2.png" rel="static/img/slider2.jpg" alt="案例2" title="案例2" /></li>
-				<li><img src="static/img/thum3.png" rel="static/img/slider3.jpg" alt="案例3" title="案例3" /></li>
-				<li><img src="static/img/thum4.png" rel="static/img/slider1.jpg" alt="案例4" title="案例4" /></li>
-				<li><img src="static/img/thum5.png" rel="static/img/slider2.jpg" alt="案例5" title="案例5" /></li>
-				<li><img src="static/img/thum1.png" rel="static/img/slider3.jpg" alt="案例6" title="案例6" /></li>
-				<li><img src="static/img/thum2.png" rel="static/img/slider1.jpg" alt="案例7" title="案例7" /></li>
-				<li><img src="static/img/thum3.png" rel="static/img/slider2.jpg" alt="案例8" title="案例8" /></li>
-				<li><img src="static/img/thum4.png" rel="static/img/slider3.jpg" alt="案例9" title="案例9" /></li>
-				<li><img src="static/img/thum5.png" rel="static/img/slider1.jpg" alt="案例10" title="案例10" /></li>
-				<li><img src="static/img/thum1.png" rel="static/img/slider2.jpg" alt="案例11" title="案例11" /></li>
-				<li><img src="static/img/thum2.png" rel="static/img/slider3.jpg" alt="案例12" title="案例12" /></li>
-				<li><img src="static/img/thum3.png" rel="static/img/slider1.jpg" alt="案例13" title="案例13" /></li>
-				<li><img src="static/img/thum4.png" rel="static/img/slider2.jpg" alt="案例14" title="案例14" /></li>
-				<li><img src="static/img/thum5.png" rel="static/img/slider3.jpg" alt="案例15" title="案例15" /></li>
-			</ul>
+			<div class="imgthum">
+				<ul id="thum">
+					<li><img src="static/img/thum1.png" rel="static/img/slider1.jpg" link="http://www.123.com" alt="案例1" title="案例1" /></li>
+					<li><img src="static/img/thum2.png" rel="static/img/slider2.jpg" link="http://www.anc.com" alt="案例2" title="案例2" /></li>
+					<li><img src="static/img/thum3.png" rel="static/img/slider3.jpg" link="http://www.asd.com" alt="案例3" title="案例3" /></li>
+					<li><img src="static/img/thum4.png" rel="static/img/slider1.jpg" link="http://www.a2i.com" alt="案例4" title="案例4" /></li>
+					<li><img src="static/img/thum5.png" rel="static/img/slider2.jpg" link="http://www.plk.com" alt="案例5" title="案例5" /></li>
+					<li><img src="static/img/thum1.png" rel="static/img/slider3.jpg" link="http://www.pki.com" alt="案例6" title="案例6" /></li>
+					<li><img src="static/img/thum2.png" rel="static/img/slider1.jpg" link="http://www.huj.com" alt="案例7" title="案例7" /></li>
+					<li><img src="static/img/thum3.png" rel="static/img/slider2.jpg" link="http://www.hjn.com" alt="案例8" title="案例8" /></li>
+					<li><img src="static/img/thum4.png" rel="static/img/slider3.jpg" link="http://www.oun.com" alt="案例9" title="案例9" /></li>
+					<li><img src="static/img/thum5.png" rel="static/img/slider1.jpg" link="http://www.plm.com" alt="案例10" title="案例10" /></li>
+					<li><img src="static/img/thum1.png" rel="static/img/slider2.jpg" link="http://www.1q3.com" alt="案例11" title="案例11" /></li>
+					<li><img src="static/img/thum2.png" rel="static/img/slider3.jpg" link="http://www.uim.com" alt="案例12" title="案例12" /></li>
+					<li><img src="static/img/thum3.png" rel="static/img/slider1.jpg" link="http://www.uyq.com" alt="案例13" title="案例13" /></li>
+					<li><img src="static/img/thum4.png" rel="static/img/slider2.jpg" link="http://www.uyt.com" alt="案例14" title="案例14" /></li>
+					<li><img src="static/img/thum5.png" rel="static/img/slider3.jpg" link="http://www.poi.com" alt="案例15" title="案例15" /></li>
+				</ul>
+			</div>
 			<div class="imgview" id="view">
 				<table>
 					<tr>
 						<td>
-							<a href="javascript:;"><img src="static/img/slider2.jpg" alt="" id="bigimg" /></a>
+							<a href="#"><img src="static/img/slider2.jpg" alt="" id="bigimg" /></a>
 						</td>
 					</tr>
 				</table>
 				<div class="casetxt">
 					<div id="casetxt">
-						<p>案例名称 <br/>
-						网址：<a href="http://www.baidu.com">http://www.baidu.com</a>
-						</p>
+						案例名称1<br/>
+						网址：<a href="http://www.baidu.com" target="_blank">http://www.baidu.com</a>
 					</div>
 				</div>
 			</div>
-			<a href="#" class="sliderbtn up" hidefocus="true">prev</a>
-			<a href="#" class="sliderbtn down" hidefocus="true">next</a>
+			<!--
+			   -<a href="javascript:;" class="sliderbtn up" hidefocus="true">prev</a>
+			   -<a href="javascript:;" class="sliderbtn down" hidefocus="true">next</a>
+			   -->
 			<i id="arrow">arrow</i>
+			<div class="cbox">cbox</div>
 		</div>
 		<script type="text/javascript">
 			var V = {
+				box : $("#case"),
 				big : $("#bigimg"),
 				thum : $("#thum"),
 				item : $("#thum img"),
-				btn : $(".sliderbtn")
+				arrow : $("#arrow"),
+				txt : $("#casetxt"),
+				index : null
 			};
+			V.item.click(function(){
+				var _this = $(this);
+				var iH = $(this).height();
+				V.index = $(this).index("#thum img");
+				var bH = V.box.height();
+				V.big.stop().animate({"opacity":0},500,"easeInOutElastic");
+				V.txt.html(_this.attr('title') + '<br/>' + '网址：' + '<a href="' + _this.attr("link") + '" target="_blank">' + _this.attr("link") + '</a>');
+				V.thum.stop().animate({"marginTop":-(iH * V.index - (bH - iH) / 2) + "px"},500,"easeInOutElastic",function(){
+					V.big.attr("src",_this.attr("rel")).stop().animate({"opacity":1});
+				});
+			});
 		</script>
-	
 	</body>
 </html>
