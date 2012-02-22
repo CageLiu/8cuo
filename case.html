@@ -52,7 +52,7 @@
 				<table>
 					<tr>
 						<td>
-							<a href="#"><img src="static/img/slider2.jpg" alt="" id="bigimg" /></a>
+							<a href="#" target="_blank"><img src="static/img/slider2.jpg" alt="" id="bigimg" /></a>
 						</td>
 					</tr>
 				</table>
@@ -88,6 +88,7 @@
 					V.index = $(this).index("#thum img");
 					var bH = V.box.height();
 					V.big.stop().animate({"opacity":0},500,"easeInOutElastic");
+					V.big.parent().attr("href",_this.attr("link"));
 					V.txt.html(_this.attr('title') + '<br/>' + '网址：' + '<a href="' + _this.attr("link") + '" target="_blank">' + _this.attr("link") + '</a>');
 					V.thum.stop().animate({"marginTop":-(iH * V.index - (bH - iH) / 2) + "px"},500,"easeInOutElastic",function(){
 						V.big.attr("src",_this.attr("rel")).stop().animate({"opacity":1});
