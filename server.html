@@ -20,7 +20,10 @@
 		<script type="text/javascript">
 			function display(){
 				var frame = window.parent.window.document.getElementById("server").getElementsByTagName("iframe")[0];
-				frame.style.position = "static";
+				setTimeout(function(){
+					frame.style.position = "static";		
+				},800)
+
 			}
 		</script>
 	</head>
