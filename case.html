@@ -70,7 +70,9 @@
 			   -<a href="javascript:;" class="sliderbtn down" hidefocus="true">next</a>
 			   -->
 			<i id="arrow">arrow</i>
-			<div id="cbox">cbox</div>
+			<div id="cbox">
+				<div>cbox</div>
+			</div>
 		</div>
 		<script type="text/javascript">
 			$(document).ready(function(){
@@ -81,10 +83,11 @@
 					item : $("#thum img"),
 					arrow : $("#arrow"),
 					txt : $("#casetxt"),
-					index : null
+					index : 0
 				};
 				V.thum.css("marginTop",V.box.height() / 2 - 45 + "px");
 				V.item.click(function(){
+					if($(this).index("#thum img") == V.index) return;
 					var _this = $(this);
 					var iH = $(this).height();
 					V.index = $(this).index("#thum img");
