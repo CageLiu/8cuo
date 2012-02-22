@@ -21,7 +21,8 @@
 		</style>
 		<script type="text/javascript">
 			function display(){
-				document.getElementById("case").style.display = "block";
+				var frame = window.parent.window.document.getElementById("case").getElementsByTagName("iframe")[0];
+				frame.style.position = "static";
 			}
 		</script>
 	</head>
@@ -70,25 +71,27 @@
 			<div id="cbox">cbox</div>
 		</div>
 		<script type="text/javascript">
-			var V = {
-				box : $("#case"),
-				big : $("#bigimg"),
-				thum : $("#thum"),
-				item : $("#thum img"),
-				arrow : $("#arrow"),
-				txt : $("#casetxt"),
-				index : null
-			};
-			V.thum.css("marginTop",V.box.height() / 2 - 45 + "px");
-			V.item.click(function(){
-				var _this = $(this);
-				var iH = $(this).height();
-				V.index = $(this).index("#thum img");
-				var bH = V.box.height();
-				V.big.stop().animate({"opacity":0},500,"easeInOutElastic");
-				V.txt.html(_this.attr('title') + '<br/>' + '网址：' + '<a href="' + _this.attr("link") + '" target="_blank">' + _this.attr("link") + '</a>');
-				V.thum.stop().animate({"marginTop":-(iH * V.index - (bH - iH) / 2) + "px"},500,"easeInOutElastic",function(){
-					V.big.attr("src",_this.attr("rel")).stop().animate({"opacity":1});
+			$(document).ready(function(){
+				var V = {
+					box : $("#case"),
+					big : $("#bigimg"),
+					thum : $("#thum"),
+					item : $("#thum img"),
+					arrow : $("#arrow"),
+					txt : $("#casetxt"),
+					index : null
+				};
+				V.thum.css("marginTop",V.box.height() / 2 - 45 + "px");
+				V.item.click(function(){
+					var _this = $(this);
+					var iH = $(this).height();
+					V.index = $(this).index("#thum img");
+					var bH = V.box.height();
+					V.big.stop().animate({"opacity":0},500,"easeInOutElastic");
+					V.txt.html(_this.attr('title') + '<br/>' + '网址：' + '<a href="' + _this.attr("link") + '" target="_blank">' + _this.attr("link") + '</a>');
+					V.thum.stop().animate({"marginTop":-(iH * V.index - (bH - iH) / 2) + "px"},500,"easeInOutElastic",function(){
+						V.big.attr("src",_this.attr("rel")).stop().animate({"opacity":1});
+					});
 				});
 			});
 		</script>

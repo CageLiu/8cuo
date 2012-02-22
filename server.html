@@ -19,7 +19,8 @@
 		</style>
 		<script type="text/javascript">
 			function display(){
-				document.getElementById("server").style.display = "block";
+				var frame = window.parent.window.document.getElementById("server").getElementsByTagName("iframe")[0];
+				frame.style.position = "static";
 			}
 		</script>
 	</head>
