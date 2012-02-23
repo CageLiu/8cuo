@@ -398,13 +398,16 @@ em.arrow{
 #server .box{
 	display:inline-block;
 	width:25%;
-	margin-top:12px;
+	/*margin-top:12px;*/
 	*display:inline;
 	zoom:1;
-	_margin-left:-1px;
+	margin-left:-1px;
+	_margin-left:-2px;
 	font-size:12px;
 	letter-spacing:normal;
 	vertical-align:top;
+	border-left:1px solid #181818;
+	height:100%;
 }
 #server .bt{
 	height:37px;
@@ -412,6 +415,8 @@ em.arrow{
 	text-indent:-999em;
 	background-image:url(../img/tit.png);
 	background-repeat:no-repeat;
+	margin-top:24px;
+	margin-bottom:8px;
 }
 .qdkf{
 	background-position:center 0;
@@ -426,10 +431,18 @@ em.arrow{
 	background-position:center -111px;
 }
 #server .bc{
-	padding:0 10px;
+	padding:0 14px;
 }
-
-
+#server .pic{
+	float:left;
+	margin-right:8px;
+	display:inline;
+	border:1px solid #181818;
+}
+#server .bc p{
+	font-size:13px;
+	line-height:23px;
+}
 
 
 
