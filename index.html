@@ -66,15 +66,16 @@
 						slider.W = slider.box.width();
 						slider.index = 0;
 						slider.list.css("width",slider.W * slider.item.length + "px");
-						slider.Img = new Image();
-						slider.Img.onload = function(){
-							slider.item.eq(slider.index).find("img").attr("src",this.src);
-							slider.item.eq(slider.index).removeAttr("rel");
-							if(slider.timer == null){
+						if(slider.item.eq(0).attr("rel")){
+							clearInterval(slider.timer);
+							slider.img = new Image();
+							slider.img.onload = function(){
+								slider.item.eq(0).find("img").attr("src",this.src);
+								slider.item.eq(0).removeAttr("rel");
 								slider.timer = setInterval(slider.S,4000);
 							}
+							slider.img.src = slider.item.eq(0).attr("rel");
 						}
-						slider.Img.src = slider.item.eq(0).attr("rel")
 						slider.S = function(){
 							slider.index < slider.item.length -1 ? ++slider.index : slider.index = 0;
 							S();
@@ -101,16 +102,21 @@
 							S();
 						});
 						function S(){
+							if(slider.item.eq(slider.index).attr("rel")){
+								clearInterval(slider.timer);
+								slider.img = new Image();
+								slider.img.onload = function(){
+									slider.item.eq(slider.index).find("img").attr("src",this.src);
+									slider.item.eq(slider.index).removeAttr("rel");
+									slider.timer = setInterval(slider.S,4000);
+								}
+								slider.img.src = slider.item.eq(slider.index).attr("rel");
+							}
 							slider.list.stop().animate({"marginLeft":-slider.index * slider.W},1400,"easeInOutElastic");
 							slider.toggle.removeClass("current");
 							slider.toggle.eq(slider.index).addClass("current");
 							slider.tit.text(slider.item.eq(slider.index).find("img").attr("title"));
 							slider.tit.attr("href",slider.item.eq(slider.index).children("a").attr("href"));
-							slider.Img.src = slider.item.eq(slider.index).attr("rel")
-							if(slider.item.eq(slider.index).attr("rel")){
-								clearInterval(slider.timer);
-								slider.timer = null;
-							}
 						}
 					</script>
 				</div>
