@@ -116,7 +116,7 @@
 								}
 								slider.img.src = slider.item.eq(slider.index).attr("rel");
 							}
-							slider.list.stop().animate({"marginLeft":-slider.index * slider.W},1400,"easeInOutElastic");
+							slider.list.stop().animate({"marginLeft":-slider.index * slider.W},600,"easeInOutExpo");
 							slider.toggle.removeClass("current");
 							slider.toggle.eq(slider.index).addClass("current");
 							slider.tit.text(slider.item.eq(slider.index).find("img").attr("title"));
