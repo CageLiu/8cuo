@@ -69,6 +69,10 @@
 						slider.Img = new Image();
 						slider.Img.onload = function(){
 							slider.item.eq(slider.index).find("img").attr("src",this.src);
+							slider.item.eq(slider.index).removeAttr("rel");
+							if(slider.timer == null){
+								slider.timer = setInterval(slider.S,4000);
+							}
 						}
 						slider.Img.src = slider.item.eq(0).attr("rel")
 						slider.S = function(){
@@ -103,6 +107,10 @@
 							slider.tit.text(slider.item.eq(slider.index).find("img").attr("title"));
 							slider.tit.attr("href",slider.item.eq(slider.index).children("a").attr("href"));
 							slider.Img.src = slider.item.eq(slider.index).attr("rel")
+							if(slider.item.eq(slider.index).attr("rel")){
+								clearInterval(slider.timer);
+								slider.timer = null;
+							}
 						}
 					</script>
 				</div>
