@@ -147,7 +147,7 @@ em.arrow{
 	position:relative;
 }
 .index .area{
-	background:url(../img/l.gif) no-repeat center center #202020;
+	background:url(../img/loading.gif) no-repeat center center #202020;
 }
 #index{
 	background-image:none;
