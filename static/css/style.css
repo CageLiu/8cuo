@@ -397,8 +397,7 @@ em.arrow{
 }
 #server .box{
 	display:inline-block;
-	width:25%;
-	/*margin-top:12px;*/
+	width:33.33333%;
 	*display:inline;
 	zoom:1;
 	margin-left:-1px;
@@ -408,6 +407,7 @@ em.arrow{
 	vertical-align:top;
 	border-left:1px solid #181818;
 	height:100%;
+	position:relative;
 }
 #server .bt{
 	height:37px;
@@ -443,20 +443,51 @@ em.arrow{
 	font-size:13px;
 	line-height:23px;
 }
-
-
-
-
-#contact{
+.skill{
+	position:absolute;
+	top:220px;
+	left:20px;
 	font-size:14px;
 }
-#contact div{
-	width:600px;
-	margin:50px auto 0;
+.skill li{
+	margin-left:30px;
+	list-style-type:disc;
+	padding:5px 0;
 }
-#contact strong{
-	color:#e63009;
+.skill .t{
+	margin-left:0;
+	list-style-type:none;
 }
 .inner_page,.inner_page body{
 	background:#202020;
+}
+#contact{
+	font-size:14px;
+}
+.citem{
+	width:260px;
+	margin:100px auto 0;
+}
+.citem dt{
+	width:48px;
+	height:48px;
+	text-indent:-999em;
+	overflow:hidden;
+	background-image:url(../img/ctype.jpg);
+	background-repeat:no-repeat;
+	float:left;
+	margin-right:12px;
+}
+.citem .qq{
+	background-position:0 0;
+}
+.citem .msn{
+	background-position:0 -48px;
+}
+.citem .mail{
+	background-position:0 -96px;
+}
+.citem dd{
+	overflow:hidden;
+	margin-bottom:10px;
 }
