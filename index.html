@@ -87,7 +87,9 @@
 								clearInterval(slider.timer);			
 							},
 							function(){
-								slider.timer = setInterval(slider.S,4000);
+								if(!slider.item.eq(slider.index).attr("rel")){
+									slider.timer = setInterval(slider.S,4000);
+								}
 							}
 						);
 						slider.btn.click(function(){
