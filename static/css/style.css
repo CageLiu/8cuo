@@ -207,6 +207,9 @@ em.arrow{
 }
 .slider img{
 	vertical-align:bottom;
+	width:900px;
+	height:360px;
+	background:url(../img/l.gif) no-repeat center center;
 }
 .sliderbtn{
 	width:65px;

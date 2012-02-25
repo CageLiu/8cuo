@@ -34,11 +34,11 @@
 					<div class="slider">
 						<div class="inner" id="slider_box">
 							<ul id="imglist">
-								<li><a target="_blank" href="http://my.68design.net/30866/works/122626.html"><img src="static/img/slider1.jpg" alt="设计--山西法士特汽车传动集团登录界面" title="设计--山西法士特汽车传动集团登录界面" /></a></li>
-								<li><a target="_blank" href="http://my.68design.net/30866/works/92154.html"><img src="static/img/slider2.jpg" alt="设计--水晶涮烤吧" title="设计--水晶涮烤吧" /></a></li>
-								<li><a target="_blank" href="http://demo.wpowerw.com/demo/flash/3/"><img src="static/img/slider3.jpg" alt="Flash整站演示一" title="Flash整站演示一" /></a></li>
-								<li><a target="_blank" href="http://demo.wpowerw.com/demo/flash/6/"><img src="static/img/slider4.jpg" alt="Flash整站演示二" title="Flash整站演示二" /></a></li>
-								<li><a target="_blank" href="http://demo.wpowerw.com/demo/flash/13/"><img src="static/img/slider5.jpg" alt="Flash整站演示三" title="Flash整站演示三" /></a></li>
+								<li rel="static/img/slider1.jpg"><a target="_blank" href="http://my.68design.net/30866/works/122626.html"><img src="static/img/temp.png" alt="设计--山西法士特汽车传动集团登录界面" title="设计--山西法士特汽车传动集团登录界面" /></a></li>
+								<li rel="static/img/slider2.jpg"><a target="_blank" href="http://my.68design.net/30866/works/92154.html"><img rel="static/img/slider2.png" src="static/img/temp.png" alt="设计--水晶涮烤吧" title="设计--水晶涮烤吧" /></a></li>
+								<li rel="static/img/slider3.jpg" ><a target="_blank" href="http://demo.wpowerw.com/demo/flash/3/"><img src="static/img/temp.png" alt="Flash整站演示一" title="Flash整站演示一" /></a></li>
+								<li rel="static/img/slider4.jpg" ><a target="_blank" href="http://demo.wpowerw.com/demo/flash/6/"><img src="static/img/temp.png" alt="Flash整站演示二" title="Flash整站演示二" /></a></li>
+								<li rel="static/img/slider5.jpg" ><a target="_blank" href="http://demo.wpowerw.com/demo/flash/13/"><img src="static/img/temp.png" alt="Flash整站演示三" title="Flash整站演示三" /></a></li>
 							</ul>
 						</div>
 						<a href="javascript:;" class="sliderbtn prev" hidefocus="true">prev</a>
@@ -66,6 +66,11 @@
 						slider.W = slider.box.width();
 						slider.index = 0;
 						slider.list.css("width",slider.W * slider.item.length + "px");
+						slider.Img = new Image();
+						slider.Img.onload = function(){
+							slider.item.eq(slider.index).find("img").attr("src",this.src);
+						}
+						slider.Img.src = slider.item.eq(0).attr("rel")
 						slider.S = function(){
 							slider.index < slider.item.length -1 ? ++slider.index : slider.index = 0;
 							S();
@@ -97,6 +102,7 @@
 							slider.toggle.eq(slider.index).addClass("current");
 							slider.tit.text(slider.item.eq(slider.index).find("img").attr("title"));
 							slider.tit.attr("href",slider.item.eq(slider.index).children("a").attr("href"));
+							slider.Img.src = slider.item.eq(slider.index).attr("rel")
 						}
 					</script>
 				</div>
