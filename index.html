@@ -68,6 +68,7 @@
 						slider.list.css("width",slider.W * slider.item.length + "px");
 						if(slider.item.eq(0).attr("rel")){
 							clearInterval(slider.timer);
+							slider.timer = null;
 							slider.img = new Image();
 							slider.img.onload = function(){
 								slider.item.eq(0).find("img").attr("src",this.src);
@@ -104,6 +105,7 @@
 						function S(){
 							if(slider.item.eq(slider.index).attr("rel")){
 								clearInterval(slider.timer);
+								slider.timer = null;
 								slider.img = new Image();
 								slider.img.onload = function(){
 									slider.item.eq(slider.index).find("img").attr("src",this.src);
