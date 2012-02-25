@@ -26,7 +26,7 @@
 		<div class="area" id="case">
 			<div class="imgthum">
 				<ul id="thum">
-					<li><img src="static/img/case_thum_1.jpg" rel="static/img/case_big_1.jpg" link="http://www.cctvcj.com" alt="CCTV旗下证券资讯网站-麒麟财经" title="CCTV旗下证券资讯网站-麒麟财经" /></li>
+					<li><img loaded="yes" src="static/img/case_thum_1.jpg" rel="static/img/case_big_1.jpg" link="http://www.cctvcj.com" alt="CCTV旗下证券资讯网站-麒麟财经" title="CCTV旗下证券资讯网站-麒麟财经" /></li>
 					<li><img src="static/img/case_thum_2.jpg" rel="static/img/slider3.jpg" link="http://demo.wpowerw.com/demo/flash/3/" alt="Flash整站一" title="Flash整站一" /></li>
 					<li><img src="static/img/case_thum_3.jpg" rel="static/img/slider4.jpg" link="http://demo.wpowerw.com/demo/flash/6/" alt="Flash整站二" title="Flash整站二" /></li>
 					<li><img src="static/img/case_thum_4.jpg" rel="static/img/slider5.jpg" link="http://demo.wpowerw.com/demo/flash/13/" alt="Flash整站三" title="Flash整站三" /></li>
@@ -77,10 +77,16 @@
 					V.index = $(this).index("#thum img");
 					var bH = V.box.height();
 					V.big.stop().animate({"opacity":0},500,"easeInOutElastic");
+					if(!_this.attr("loaded")){
+						V.big.attr("src","static/img/loading.gif");
+					}
 					V.big.parent().attr("href",_this.attr("link"));
 					V.txt.html(_this.attr('title') + '<br/>' + '网址：' + '<a href="' + _this.attr("link") + '" target="_blank">' + _this.attr("link") + '</a>');
 					V.thum.stop().animate({"marginTop":-(iH * V.index - (bH - iH) / 2) + "px"},500,"easeInOutElastic",function(){
 						V.big.attr("src",_this.attr("rel")).stop().animate({"opacity":1});
+						if(!_this.attr("loaded")){
+							_this.attr("loaded","yes");
+						}
 					});
 				});
 			});
