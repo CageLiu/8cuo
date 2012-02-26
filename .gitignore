@@ -4,3 +4,4 @@
 *.tar.gz
 *.svn
 logs/*
+news_temp.html

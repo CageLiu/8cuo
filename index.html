@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>臭皮匠建站</title>
+		<meta name="keywords" content="网站建设,三个臭皮匠赛过诸葛亮，臭皮匠，臭皮匠建站,前端开发，网页设计" />
+		<meta name="description" content="臭皮匠，专业的网站建设专家,互联网新闻资讯,专注前端开发" />
 		<link type="text/css" rel="stylesheet" href="static/css/style.css?v=1"/>
 		<script type="text/javascript" src="static/js/jquery.js?v=2"></script>
 		<script type="text/javascript" src="static/js/base.js?v=3"></script>
@@ -23,10 +25,10 @@
 				<li class="current"><a href="javascript:;" hidefocus="true">首 &nbsp; 页</a></li>
 				<li><a href="javascript:;" hidefocus="true">案例欣赏</a></li>
 				<li><a href="javascript:;" hidefocus="true">服务内容</a></li>
-				<!--<li><a href="javascript:;" hidefocus="true">关于我们</a></li>-->
 				<li><a href="javascript:;" hidefocus="true">联系我们</a></li>
 			</ul>
 			<span id="nav_slider">current menu</span>
+			<h2 id="newslink"><a href="newslist.html">新闻列表</a></h2>
 		</div>
 		<div class="wrap" id="wrap">
 			<div class="area" id="index">
@@ -143,5 +145,9 @@
 		<div class="ft">
 			Copyright &copy; 2012-2013 by 臭皮匠
 		</div>
+		<script type="text/javascript">
+			var newsLink = document.getElementById("newslink");
+			newsLink.style.display = "none";
+		</script>
 	</body>
 </html>
