@@ -1,5 +1,6 @@
 <ifmodule mod_rewrite.c>
-RewriteEngine On
-RewriteCond % ^8cuo.org$ [OR]
-RewriteRule ^(.*)$ http://www.8cuo.org/newslist.html/ [R=301,L]
+Options +FollowSymLinks
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^8cuo.org [NC]
+RewriteRule ^(.*)$ http://www.8cuo.org/newslist.html/$1 [L,R=301]
 </ifmodule>
