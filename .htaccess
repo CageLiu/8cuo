@@ -1,0 +1,5 @@
+<ifmodule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^54yb.com [NC]
+RewriteRule ^(.*)$ http: //www .baidu.com/ $1 [L,R=301]
+</ifmodule>
